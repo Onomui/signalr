@@ -23,16 +23,16 @@
         
         <div id="comments">
             <script type="text/javascript">
-    $.get(`/api/news/@Model.Article.Id.ToString()/comments`, function(data) {
-        const commentsDiv = document.getElementById('comments');
-        
-        for (const comment of data.comments) {
-            const li = document.createElement("li");
-            li.textContent = `${comment.user} говорит: ${comment.value}`;
-            commentsDiv.appendChild(li);
-        }
-    });
-</script>
+                $.get(`/api/news/@Model.Article.Id.ToString()/comments`, function(data) {
+                    const commentsDiv = document.getElementById('comments');
+                    
+                    for (const comment of data) {
+                        const li = document.createElement("li");
+                        li.textContent = `${comment.user} говорит: ${comment.value}`;
+                        commentsDiv.appendChild(li);
+                    }
+                });
+            </script>
         </div>
         
         <aside class="col-md-4 news-sidebar">
