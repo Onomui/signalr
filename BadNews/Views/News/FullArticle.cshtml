@@ -1,6 +1,7 @@
 ﻿@using BadNews.Elevation
 @model BadNews.Models.News.FullArticleModel
 <script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/js/signalr/dist/browser/signalr.js"></script>
 
 <main role="main" class="container">
     <div class="row">
@@ -33,6 +34,16 @@
                     }
                 });
             </script>
+        </div>
+
+        <label>
+            Пользователь <input id="userInput">
+        </label>
+        <label>
+            Комментарий <input id="commentInput">
+        </label>
+        <div>
+            <button id="sendButton">Отправить</button>
         </div>
         
         <aside class="col-md-4 news-sidebar">
